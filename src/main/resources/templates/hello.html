@@ -1,0 +1,9 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+<h1>User Hello</h1>
+
+<h2 th:text="${user.username}"></h2>
+<h2 th:text="${user.extraInfo}"></h2>
+<!-- 로그아웃시 직접 정의한 "my_logout" 주소로 이동하도록 주소 설정 -->
+<a th:href="@{/my_logout}">Logout</a>
+</body>

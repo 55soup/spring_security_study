@@ -1,0 +1,12 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<h1>회원 가입</h1>
+
+<form th:action="@{/sign_up_process}" method='POST'>
+  <label>email</label> <input type='text' name='username' value=''><br />
+  <label>password</label> <input type='password' name='password' /><br />
+  <h2>권한</h2>
+  ADMIN <input type="checkbox" name="roles" value="ADMIN" />
+  USER <input type="checkbox" name="roles" value="USER" />
+  <br />
+  <input name="submit" type="submit" value="submit" />
+</form>

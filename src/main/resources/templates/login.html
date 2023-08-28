@@ -1,0 +1,15 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+<h1>로그인</h1>
+
+<!-- action 값으로 지정할 주소는 loginProcessingUrl 메소드를 통해 설정한 로그인 처리 주소(기본값은 "/login") -->
+<form th:action="@{/login_proc}" method='POST'>
+    <p th:if="${param.error}">로그인 실패 : <b th:text="${session['SPRING_SECURITY_LAST_EXCEPTION'].message}"></b></p>
+    <p th:if="${param.logout}">성공적으로 로그아웃</p>
+    <p th:if="${param.signup}">회원가입 완료</p>
+    <label>email</label> <input type='text' name='username' value=''><br />
+    <label>password</label> <input type='password' name='password' /><br />
+    <input name="submit" type="submit" value="로그인" />
+</form>
+<a href="/sign_up">회원 가입</a>
+</body>
